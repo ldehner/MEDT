@@ -15,9 +15,9 @@ $user = $_POST["user"];
 $passwort = md5($_POST["passwort"]);
 $email = $_POST["email"];
 	
-$verbindung = mysql_connect("localhost", "mongopublic", "haha1234") or die("Fehler im System");
+$verbindung = mysql_connect("localhost", "accountname", "passwort") or die("Fehler im System");
 			
-	mysql_select_db("mongopublic") or die("Verbindung zur Datenbank war nicht möglich...");
+	mysql_select_db("datenbankname") or die("Verbindung zur Datenbank war nicht möglich...");
 			
 	
 	$abfrage = "SELECT * FROM login WHERE user = '$user' AND passwort = '$passwort' AND email = '$email'";
