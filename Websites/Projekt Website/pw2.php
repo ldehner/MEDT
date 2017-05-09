@@ -21,10 +21,10 @@ session_start();
     $user = $_SESSION["username"];
 	$email = $_SESSION["email"];
 
-    $verbindung = mysql_connect("localhost", "fotostudiodehner", "internet02");
-    mysql_select_db("fotostudiodehner");
+    $verbindung = mysql_connect("localhost", "accountname", "passwort");
+    mysql_select_db("datenbankname");
 
-    $abfrage = "SELECT passwort FROM login WHERE user = '$user'";
+    $abfrage = "SELECT passwort FROM login WHERE user = '$user'"; //login ist der Tabellenname
     $ergebnis = mysql_query($abfrage);
     $pw_alt = mysql_fetch_object($ergebnis);
 

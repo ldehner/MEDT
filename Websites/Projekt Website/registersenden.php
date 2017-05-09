@@ -48,9 +48,9 @@ if(isset($_GET["page"])){
 		$passwort = (md5($passwort1));
 		$sicher = $_POST["sicherheitsfrage"];
 		
-			$verbindung = mysql_connect("localhost", "fotostudiodehner", "internet02") or die("Fehler im System");
+			$verbindung = mysql_connect("localhost", "accountname", "passwort") or die("Fehler im System");
 			
-			mysql_select_db("fotostudiodehner") or die("Verbindung zur Datenbank war nicht möglich...");
+			mysql_select_db("datenbankname") or die("Verbindung zur Datenbank war nicht möglich...");
 			
 			$control = 0;
 			$abfrage = "SELECT user FROM login WHERE user = '$user'";
