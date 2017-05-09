@@ -1,0 +1,30 @@
+html{
+	text-align: center;
+		
+}
+
+button{
+	margin-top: 100px;
+	padding: 10px 30px; <!-- 1. ist oben, 2. ist rechts, 3. ist unten, 4. ist links -->;
+
+  	color: #0A8781;
+	background-color: #db5757;
+	box-shadow: 0px 17px 10px -7px;
+	rgba(0, 0, 0, 0,4); <!-- ersten drei sind rgb das letzte ist transparenz -->;
+	
+	border: solid 3px #db5757;
+	
+	font-size: 30px;
+	font-family: Grand Hotel;
+	
+	transition: ease-in-out all 300ms
+}
+button:hover {
+	color: #db5757;
+	background-color: #FFF;
+	
+	transform: translate(0px, -10px); <!-- minus ist dass es hoch geht und die 0 ist dass es nicht nach links oder rechts geht -->;
+	
+	box-shadow: 0px 30px 10px;
+	rgba(0,0,0,0.2)
+}
