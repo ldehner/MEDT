@@ -11,7 +11,8 @@ session_start();
 <body>
     <?php
 	if($_POST["passwort_neu"]!=$_POST["passwort_neu2"]){
-		echo"Dein gewünschtes Passwort hat nicht mit der Wiederholung übereingestimmt <a href='account.php'>zurück</a>";
+		echo"Dein gewünschtes Passwort hat nicht mit der Wiederholung übereingestimmt!";?>
+		<meta http-equiv="Refresh" content="2; URL=account.php"><?php
 	}
 	else{
 	$pwn = $_POST["passwort_neu"];
@@ -23,12 +24,12 @@ session_start();
     $verbindung = mysql_connect("localhost", "fotostudiodehner", "internet02");
     mysql_select_db("fotostudiodehner");
 
-    $abfrage = "SELECT passwort FROM login WHERE passwort = '$passwort_alt'";
+    $abfrage = "SELECT passwort FROM login WHERE user = '$user'";
     $ergebnis = mysql_query($abfrage);
     $pw_alt = mysql_fetch_object($ergebnis);
 
 
-    if ($pw_alt->passwort == $passwort_alt)
+    if ($pw_alt-->passwort == $passwort_alt)
     {$aendern = "UPDATE login SET passwort = '$passwort_neu'";
     $update = mysql_query($aendern);
     echo "Ihr Passwort wurde erfolgreich geändert, Sie werden auf die Login Seite geleitet...";
@@ -67,8 +68,8 @@ session_start();
 	}
 
     else
-    {echo "Das Passwort war falsch.
-    <br /><a href=\"account.php\">zurück</a>.";}
+    {echo "Das Passwort war falsch.";}
+	?><meta http-equiv="Refresh" content="2; URL=account.php"><?php
 	}?>
      
 </body>
